@@ -1,4 +1,5 @@
 module.exports = {
+  base: "/blog/",
   locales: {
     '/': {
       lang: 'ja',
@@ -6,20 +7,15 @@ module.exports = {
       description: "fagahhe2645's blog",
     },
   },
+  config: (md) => {
+    md.options.linkify = true
+  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about/' },
       { text: 'Blog', link: '/blog/' }
     ],
-    // sidebar: [
-    //   {
-    //     title: 'Blog',
-    //     children: [
-    //       '/blog/'
-    //     ]
-    //   }
-    // ]
   },
   head: [
     ['link', { rel: 'icon', type: 'image/jpg', href: '/favicon.jpg' }],
